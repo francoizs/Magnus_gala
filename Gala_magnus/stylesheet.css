@@ -9,6 +9,19 @@ body {
     
     background-color: #232323 !important;
 }
+::-webkit-scrollbar {
+    width: 8px;
+  }
+::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: black;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgb(145, 145, 145), rgb(145, 145, 145));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(145, 145, 145), rgb(145, 145, 145)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 0px;
+}
 .front-section {
     align-items: center;
     width: 100%;
@@ -32,13 +45,17 @@ body {
 }
 
 nav {
+    z-index: 1000;
     position: fixed;
     display:flex;
     justify-content:center;
-    
-    background-color: rgba(255, 255, 255, 0.134);
     height: 45px;
     width: 100%;
+    transition: 400ms;
+}
+.nav-past {
+    transition: 400ms;
+    background-color: #232323;
 }
 nav ul {
     height: 100%;
@@ -81,13 +98,22 @@ nav ul .tickets-link {
     
 }
 .container-deed {
-    padding-top: 5vh;
+    padding-top: 10vh;
 }
 .title-deed {
     color: white;
     text-decoration: 5px underline black;
 }
-
+.text-deed {
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+.deed-mag-img {
+    border-radius: 5px;
+    margin-top: 3rem;
+    border: 5px solid rgba(255, 255, 255, 0.884);
+}
 
 
 
